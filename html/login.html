@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkSphere | login</title>
-    <link rel="stylesheet" href="styles\style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkSphere | login</title>
+  <link rel="stylesheet" href="/styles/auth.css">
 </head>
 <body>
-    
+  <div class="form-container">
+    <div class="form-toggle">
+      <button id="login-btn" class="active" type="button">Авторизация</button>
+      <button id="register-btn" type="button">Регистрация</button>
+    </div>
+    <div class="form-content">
+      <!-- auth -->
+      <form id="login-form" class="active" action="index.html">
+        <h2>Авторизация</h2>
+        <label for="login-email">Электронная почта</label>
+        <input type="email" id="login-email" name="email" placeholder="Введите email" required>
+        
+        <label for="login-password">Пароль</label>
+        <input type="password" id="login-password" name="password" placeholder="Введите пароль" required>
+        
+        <button type="submit">Войти</button>
+      </form>
+      
+      <!-- regiistr -->
+      <form id="register-form" action="/html/index.html">
+        <h2>Регистрация</h2>
+        <label for="register-username">Имя пользователя</label>
+        <input type="text" id="register-username" name="username" placeholder="Введите имя" required>
+        
+        <label for="register-email">Электронная почта</label>
+        <input type="email" id="register-email" name="email" placeholder="Введите email" required>
+        
+        <label for="register-password">Пароль</label>
+        <input type="password" id="register-password" name="password" placeholder="Введите пароль" required>
+        
+        <label for="register-confirm-password">Подтвердите пароль</label>
+        <input type="password" id="register-confirm-password" name="confirm-password" placeholder="Повторите пароль" required>
+        
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/scripts/script.js"></script>
 </body>
 </html>
