@@ -3,54 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная страница</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>LinkSphere | Main</title>
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-green-500 text-white p-4 flex justify-between items-center">
-    <div class="text-2xl font-bold">MySocial</div>
-    <nav class="flex gap-4">
-      <a href="#" class="hover:underline">Главная</a>
-      <a href="#" class="hover:underline">Друзья</a>
-      <a href="#" class="hover:underline">Сообщения</a>
-      <a href="#" class="hover:underline">Имя Пользователя</a>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>MySocial</h1>
+    </div>
+    <nav class="nav">
+      <a href="#">Главная</a>
+      <a href="#">Друзья</a>
+      <a href="#">Сообщения</a>
+      <span class="user-profile">
+        <a href="#">Имя Пользователя</a>
+      </span>
     </nav>
   </header>
 
-  <main class="max-w-2xl mx-auto p-4">
-    <!-- Пост -->
-    <div class="bg-white shadow-md rounded-lg p-4 mb-6">
-      <div class="flex justify-between text-sm text-gray-500">
-        <span>Автор: John Doe</span>
-        <span>22 ноября 2024</span>
+  <main class="content">
+    <section class="post">
+      <div class="post-header">
+        <span class="post-author">Автор: John Doe</span>
+        <span class="post-date">22 ноября 2024</span>
       </div>
-      <p class="mt-4 text-gray-700">
-        Это пример поста для демонстрации работы лайков и комментариев.
-      </p>
-      <div class="flex items-center mt-4 gap-4">
-        <button class="like-btn flex items-center gap-1 text-gray-600">
-          ❤️ <span>Лайк</span>
-        </button>
-        <button class="comment-btn flex items-center gap-1 text-gray-600">
-          💬 <span>Комментарии</span>
-        </button>
+      <div class="post-body">
+        <p>Это пример поста для демонстрации работы лайков и комментариев.</p>
       </div>
-      <!-- Секция комментариев -->
-      <div class="comments-section mt-4 hidden">
-        <textarea 
-          class="w-full p-2 border border-gray-300 rounded-md" 
-          placeholder="Напишите комментарий..."></textarea>
-        <button 
-          class="mt-2 bg-green-500 text-white py-1 px-4 rounded hover:bg-green-600">
-          Отправить
-        </button>
-        <ul class="comments-list mt-4 space-y-2">
-          <!-- Комментарии будут добавляться сюда -->
-        </ul>
+      <div class="post-footer">
+        <button class="like-btn" data-liked="false">❤️ Лайк</button>
+        <button class="comment-btn">💬 Комментарии</button>
+        <div class="comments-section hidden">
+          <textarea class="comment-input" placeholder="Напишите комментарий..."></textarea>
+          <button class="submit-comment">Отправить</button>
+          <ul class="comments-list"></ul>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
-  <script src="scripts/index.js"></script>
+  <script src="/scripts/script.js"></script>
 </body>
 </html>
